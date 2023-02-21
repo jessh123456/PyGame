@@ -111,6 +111,9 @@ def game_loop():
 
             # Check if the user wants to quit (Q) or play again (A)
             for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    quit_game = True
+                    game_over = False
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_q:
                         quit_game = True
